@@ -57,8 +57,18 @@ class ClockPainter extends CustomPainter {
     double secondX = centerX + size.width * 0.4 * cos((dateTime.second * 6) * pi / 180);
     double secondY = centerY + size.width * 0.4 * sin((dateTime.second * 6) * pi / 180);
 
+    //Second Line
+    canvas.drawLine(center, Offset(secondX, secondY),
+      Paint()..color = Theme.of(context).primaryColor
+    );
 
-    Paint dotPainter = Paint();
+
+    Paint dotPainter = Paint()..color =   Theme.of(context).primaryIconTheme.color!;
+    canvas.drawCircle(center, 24, dotPainter);
+    canvas.drawCircle(
+        center, 23, Paint()..color = Theme.of(context).backgroundColor
+    );
+    canvas.drawCircle(center, 10, dotPainter);
 
   }
 

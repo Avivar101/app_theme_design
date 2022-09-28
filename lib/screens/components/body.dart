@@ -13,27 +13,43 @@ class Body extends StatelessWidget {
         child: SizedBox(
           width: double.infinity,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
                   "Body",
                 style: Theme.of(context).textTheme.bodyText1,
               ),
               const TimeInHourAndMinute(),
-              const Spacer(),
+              // const Spacer(),
               Clock(),
-              const Spacer(),
+              // const Spacer(),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    CountryCard(),
-                    CountryCard()
+                    CountryCard(
+                      key: UniqueKey(),
+                      country: "Lagos, Nigeria",
+                      timeZone: "+1 HRS | GMT",
+                      iconSrc: "assets/icons/Sydney.svg",
+                      time: "1:20",
+                      period: "AM",
+                    ),
+                    CountryCard(
+                      key: UniqueKey(),
+                      country: "Lagos, Nigeria",
+                      timeZone: "+1 HRS | GMT",
+                      iconSrc: "assets/icons/Sydney.svg",
+                      time: "1:20",
+                      period: "AM",
+                    )
                   ],
                 ),
-              )
+              ),
             ],
           ),
         )
+
     );
   }
 

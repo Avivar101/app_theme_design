@@ -15,7 +15,7 @@ ThemeData themeData(BuildContext context) {
       bodyText1: const TextStyle(color: kBodyTextColorLight),
       bodyText2: const TextStyle(color: kBodyTextColorLight),
       headline1: const TextStyle(color: kTitleTextLightColor, fontSize: 32),
-      headline4: const TextStyle(color: kTitleTextLightColor, fontSize: 80),
+      headline4: const TextStyle(color: kTitleTextLightColor, fontSize: 40),
     ), colorScheme: const ColorScheme.light(
       secondary: kSecondaryLightColor
     ).copyWith(secondary: kAccentLightColor),
@@ -35,7 +35,7 @@ ThemeData darkThemeData(BuildContext context) {
       bodyText1: const TextStyle(color: kBodyTextColorDark),
       bodyText2: const TextStyle(color: kBodyTextColorDark),
       headline1: const TextStyle(color: kTitleTextDarkColor, fontSize: 32),
-      headline4: const TextStyle(color: kTitleTextDarkColor, fontSize: 80)
+      headline4: const TextStyle(color: kTitleTextDarkColor, fontSize: 40)
     ), colorScheme: const ColorScheme.light(
         secondary: kSecondaryDarkColor,
         surface: kSurfaceDarkColor).copyWith(secondary: kAccentDarkColor)
